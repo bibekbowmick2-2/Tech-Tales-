@@ -27,6 +27,8 @@ const AuthProvider = ({ children }) => {
     const hasUppercase = /[A-Z]/.test(password);
     const hasLowercase = /[a-z]/.test(password);
     const isValidLength = password.length >= 6;
+    const hasSpecialCharacter = /[^a-zA-Z0-9]/.test(password); 
+    const hasNumericCharacter = /[0-9]/.test(password);
 
     if (!hasUppercase) {
       return "Password must have at least one uppercase letter.";
@@ -36,6 +38,13 @@ const AuthProvider = ({ children }) => {
     }
     if (!isValidLength) {
       return "Password must be at least 6 characters long.";
+    }
+
+    if (!hasSpecialCharacter) {
+      return "Password must contain special characters.";
+    }
+    if (!hasNumericCharacter) {
+      return "Password must contain numeric characters.";
     }
 
     return ""; // No errors

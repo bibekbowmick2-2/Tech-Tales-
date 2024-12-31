@@ -26,7 +26,7 @@ const Header = () => {
         <NavLink to="/home">Home</NavLink>
       </li>
       <li>
-        <NavLink to="/allReviews">All Review</NavLink>
+        <NavLink to="/allReviews">All Blogs</NavLink>
       </li>
 
       <li>
@@ -35,13 +35,13 @@ const Header = () => {
       {user && (
         <>
           <li>
-            <NavLink to="/addReviews">Add Review</NavLink>
+            <NavLink to="/addReviews">Add Blogs</NavLink>
           </li>
           <li>
             <NavLink to="/myReviews">My Review</NavLink>
           </li>
           <li>
-            <NavLink to="/gameWatchList">Game Watch List</NavLink>
+            <NavLink to="/gameWatchList">WishList</NavLink>
           </li>
         </>
       )}
